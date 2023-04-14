@@ -10,6 +10,13 @@
     min-height: 14px;
 }
 
+.mi-16 {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
 .mi-24 {
     width: 24px;
     height: 24px;
@@ -17,6 +24,12 @@
     min-height: 24px;
 }
 
+.mi-36 {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+}
 
 
 /* Header icon */
@@ -111,3 +124,20 @@
     background-position: -29px -357px;
 }
 
+
+/* Button icon */
+
+.mi-refresh {
+    background-position: -418px -194px;
+}
+
+.mi-refresh:hover {
+    background-position: -1090px -82px;
+}
+.mi-refresh:active {
+    background-position: -1091px -82px;
+}
+
+.mi-search {
+    background-position: -992px -360px;
+}

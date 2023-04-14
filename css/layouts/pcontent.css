@@ -26,6 +26,15 @@
     width: 100%;
     height: calc(100vh - 164px);
     margin-top: 24px;
-    background-color: green;
+    background-color: #fff;
+    /* background-color: green; */
+    padding: 24px;
 }
 
+/* Search bar */
+.pcontent__searchbar {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 24px;
+    overflow: hidden;
+}

@@ -70,13 +70,9 @@
 
 /* Icon button - Refresh */
 
-.btn--refresh {
-    width: var(--h-default);
-    background: var(--clr-lg200) url(../../assets/img/Sprites.64af8f61.svg) no-repeat -1090px -82px;
-} 
 
 .btn--refresh:hover {
-    background-color: var(--clr-lg100);
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -1090px -82px;
     cursor: pointer;
 }
 
