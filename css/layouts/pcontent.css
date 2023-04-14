@@ -1,6 +1,8 @@
 .pcontent {
     width: 100%;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -23,12 +25,11 @@
 
 .pcontent__container {
     width: 100%;
-    height: calc(100vh - 164px);
+    flex: 1;
     min-height: 200px;
     overflow: hidden;
     margin-top: 24px;
     background-color: #fff;
-    /* background-color: green; */
     padding: 24px;
     display: flex;
     flex-direction: column;
