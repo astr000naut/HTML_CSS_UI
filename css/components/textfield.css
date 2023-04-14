@@ -1,0 +1,125 @@
+/*
+    txtfield
+    txtfield with icon
+*/
+
+/* Textfield */
+
+
+.txtfield__textbox {
+    height: var(--h-default);
+    width: 280px;
+    position: relative;
+}
+
+.txtfield__label {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.txtfield__input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--clr-t-border);
+    border-radius: var(--border-radius);
+    padding: 0 12px 0 12px;
+}
+
+.txtfield__input:hover {
+    background-color: var(--clr-t-bg);
+ }
+ 
+ .txtfield__input:focus {
+     outline: none;
+     border: 1px solid var(--clr-lg500);
+ }
+
+.txtfield:not(.txtfield--error) .txtfield__noti {
+    display: none;
+}
+
+.txtfield__noti {
+    margin-top: 8px;
+    color: red;
+    font-size: 10px;
+}
+
+/* Error */
+
+.txtfield--error .txtfield__input {
+    border: 1px solid red;
+}
+
+/* Validate */
+
+.txtfield--validate .txtfield__input {
+    border: 1px solid var(--clr-lg500);
+    padding-right: 36px;
+} 
+
+.txtfield--validate .txtfield__icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../../assets/img/Sprites.64af8f61.svg');
+    background-repeat: no-repeat;
+    background-position: -893px -406px;
+}
+
+/* Verifying */
+.txtfield--verifying .txtfield__input {
+    padding-right: 36px;
+    border: 1px solid var(--clr-lg500);
+}
+
+.txtfield--verifying .txtfield__icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../../assets//loading.svg');
+    background-size:contain;
+}
+
+
+/* Search */
+
+.txtfield--search .txtfield__input {
+    padding-right: 36px;
+}
+
+.txtfield--search .txtfield__icon {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    border-radius: 0 4px 4px 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../../assets/img/Sprites.64af8f61.svg');
+    background-repeat: no-repeat;
+    background-position: -1035px -82px;
+}
+
+.txtfield--search .txtfield__icon:hover {
+    background-color: var(--clr-t-border);
+    cursor: pointer;
+}
+
+.txtfield--search .txtfield__icon:active {
+    background-color: var(--clr-t-disable);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

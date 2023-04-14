@@ -1,0 +1,62 @@
+.cmenu {
+    width: 200px;
+    padding: 16px 0;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+}
+
+.cmenu__item {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px ;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.cmenu__item .item__icon {
+    width: 24px;
+}
+
+.cmenu__item .item__icon i {
+    font-size: 24px;
+}
+
+.cmenu__item > .item__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.cmenu hr {
+    border-top: 1px solid var(--clr-t-border);
+    outline: none;
+    margin: 8px 0;
+}
+
+.cmenu__item:hover {
+    background-color: var(--clr-lg50);
+}
+
+.cmenu__item > .icon--history {
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -648px -145px;
+}
+
+.cmenu__item > .icon--download {
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -648px -145px;
+}
+
+.cmenu__item > .icon--bookmark {
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -648px -145px;
+}
+
+.cmenu__item > .icon--recent {
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -648px -145px;
+}
+
+.cmenu__item > .icon--share {
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -648px -145px;
+}
+
+.cmenu__item > .icon--setting {
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -648px -145px;
+}

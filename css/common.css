@@ -1,0 +1,20 @@
+.m-row {
+    margin-top: 20px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+.m-heading {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.margin-left20 {
+    margin-left: 20px;
+}
+
+.common-flex-container {
+    display: flex;
+    column-gap: 20px;
+}
+

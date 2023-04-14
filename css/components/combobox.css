@@ -1,0 +1,122 @@
+.cbox__label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.select__box {
+    display: flex;
+    height: var(--h-default);
+}
+
+
+.cbox__select {
+    width: 280px;
+}
+
+.select__input {
+    width: 100%;
+}
+
+.select__input input {
+    height: 100%;
+    width: 100%;
+    padding: 0 46px 0 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--clr-t-border);
+}
+
+.select__box {
+    position: relative;
+    border-radius: var(--border-radius);
+}
+.select__button {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 40px;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    border-left: 1px solid var(--clr-t-border);
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -1118px -352px;
+}
+
+.select__optionbox {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    max-height: 308px;
+    margin-top: 1px;
+}
+
+.optionlist {
+    max-height: 292px;
+    user-select: none;
+    overflow-y: scroll;
+}
+
+.option__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.option__icon {
+    width: 16px;
+    height: 16px;
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -1225px -363px;
+}
+
+.option__item {
+    height: var(--h-default);
+    border-radius: var(--border-radius);
+}
+
+.optionlist::-webkit-scrollbar {
+    width: 9px;
+    background-color: transparent;
+}
+
+.optionlist::-webkit-scrollbar-thumb {
+    background-color: var(--clr-t-border);
+    border-radius: 8px;
+}
+
+.select__button:hover {
+    background-color: var(--clr-t-border);
+    cursor: pointer;
+}
+
+.select__button:active {
+    background-color: var(--clr-t-bg);
+}
+
+
+.select__input input:hover {
+
+    background-color: var(--clr-t-bg);
+}
+
+.select__input input:focus {
+    outline: none;
+    border: 1px solid var(--clr-lg500);
+}
+
+.option__item:hover {
+    cursor: pointer;
+    background-color: var(--clr-lg100);
+}
+
+
+.item--selected {
+    color: var(--clr-lg500);
+}
+
+.option__item:not(.item--selected) .option__icon {
+    display: none;
+}
+
+
+
+
+

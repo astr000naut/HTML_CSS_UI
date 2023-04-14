@@ -1,0 +1,21 @@
+.radio__label {
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.radio__item {
+    margin-bottom: 12px;
+}
+
+.radio__item > input {
+    vertical-align: middle;
+    margin: 0px; 
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    color: green;
+    transform: translateY(-15%);
+}

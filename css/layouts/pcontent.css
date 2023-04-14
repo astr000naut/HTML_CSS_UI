@@ -1,0 +1,31 @@
+.pcontent {
+    height: calc(100vh - 56px);
+    width: calc(100vw - 200px);
+    padding: 24px;
+}
+
+
+/* Heading */
+
+.pcontent__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pcontent__title {
+    flex-shrink: 0;
+    font-size: var(--fs-head1);
+    font-weight: 700;
+    line-height: var(--lh-head1);
+}
+
+/* Container */
+
+.pcontent__container {
+    width: 100%;
+    height: calc(100vh - 164px);
+    margin-top: 24px;
+    background-color: green;
+}
+

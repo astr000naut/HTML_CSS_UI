@@ -1,0 +1,22 @@
+.eminfo {
+    position: fixed;
+    background-color: #8a8a8a8a;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.eminfo__main {
+    width: 1200px;
+    height: 700px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eminfo__bar {
+    
+}

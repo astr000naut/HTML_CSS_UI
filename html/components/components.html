@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M - Components</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="m-heading">Button</div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">1. Primary button: default, hover, click</label>
+        </div>
+        <span><button class="btn btn--medium btn--primary">Thêm mới nhân viên</button></span>
+        <span><button class="btn btn--medium btn--primary">Cất và thêm</button></span>
+        <span><button class="btn btn--medium btn--primary">Đồng ý</button></span>
+    </div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">2. Primary button: disabled</label>
+        </div>
+        <div class="m-row">
+            <button  class="btn btn--medium btn--primary" disabled>Button</button>
+        </div>
+    </div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">3. Secondary button: default, hover, click</label>s
+        </div>
+        <span><button class="btn btn--medium btn--secondary">Button</button></span>
+        <span><button class="btn btn--medium btn--secondary">Cất</button></span>
+        <span><button class="btn btn--medium btn--secondary">Hủy</button></span>
+    </div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">4. Secondary button: disabled</label>s
+        </div>
+        <div class="m-row">
+            <button class="btn btn--medium btn--secondary" disabled>Button</button>
+        </div>
+    </div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">5. Icon button: </label>
+        </div>
+        <span><button class="btn btn--medium btn--refresh"></button></span>
+        <span><button class="btn btn--medium btn--notification"></button></span>
+        <span><button class="btn btn--medium btn--help"></button></span>
+        <span><button class="btn btn--medium btn--close"></button></span>
+    </div>
+    <div class="m-heading">Textfield</div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">1. Textfield: normal, hover, focus</label>
+        </div>
+        <div class="txtfield">
+            <div class="txtfield__label">Field label</div>
+            <div class="txtfield__textbox">
+                <input class="txtfield__input"type="text" placeholder="Place holder">
+                <div class="txtfield__icon"></div>
+            </div>
+            <div class="txtfield__noti">
+                Tên trường không được để trống
+            </div>
+        </div>
+    </div>
+    <div class="m-row margin-left20" style="width: 100%;">
+        <div class="m-row">
+            <label for="">2. Textfield: error, read only</label>
+        </div>
+        <div class="common-flex-container">
+            <div class="m-row">
+                <div class="txtfield txtfield--error">
+                    <div class="txtfield__label">Field label</div>
+                    <div class="txtfield__textbox">
+                        <input class="txtfield__input"type="text" placeholder="">
+                        <div class="txtfield__icon"></div>
+                    </div>
+                    <div class="txtfield__noti">
+                        Tên trường không được để trống
+                    </div>
+                </div>
+            </div>
+            <div class="m-row">
+                <div class="txtfield">
+                    <div class="txtfield__label">Field label</div>
+                    <div class="txtfield__textbox">
+                        <input class="txtfield__input"type="text" placeholder="" value="misa.amis.vn" disabled>
+                        <div class="txtfield__icon"></div>
+                    </div>
+                    <div class="txtfield__noti">
+                        Tên trường không được để trống
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    <div class="m-row margin-left20" style="width: 100%;">
+        <div class="m-row">
+            <label for="">3. Textfield: validate, verifying</label>
+        </div>
+        <div class="common-flex-container">
+            <div class="m-row">
+                <div class="txtfield txtfield--validate">
+                    <div class="txtfield__label">Field label</div>
+                    <div class="txtfield__textbox">
+                        <input class="txtfield__input"type="text" placeholder="" value="Some things">
+                        <div class="txtfield__icon"></div>
+                    </div>
+                    <div class="txtfield__noti">
+                        Tên trường không được để trống
+                    </div>
+                </div>
+            </div>
+            <div class="m-row">
+                <div class="txtfield txtfield--verifying">
+                    <div class="txtfield__label">Field label</div>
+                    <div class="txtfield__textbox">
+                        <input class="txtfield__input"type="text" placeholder="" value="Some things">
+                        <div class="txtfield__icon"></div>
+                    </div>
+                    <div class="txtfield__noti">
+                        Tên trường không được để trống
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    <div class="m-row margin-left20" style="width: 100%;">
+        <div class="m-row">
+            <label for="">4. Textfield: action, hover, press</label>
+        </div>
+        <div class="common-flex-container">
+            <div class="m-row">
+                <div class="txtfield txtfield--search">
+                    <div class="txtfield__label">Field label</div>
+                    <div class="txtfield__textbox">
+                        <input class="txtfield__input"type="text" placeholder="Tìm kiếm theo mã, tên nhân viên">
+                        <div class="txtfield__icon"></div>
+                    </div>
+                    <div class="txtfield__noti">
+                        Tên trường không được để trống
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-heading">Dropdownlist</div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">1. Dropdownlist: normal, hover, show options</label>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown__label">
+                <label for="">Field label</label>
+            </div>
+            <div class="dropdown__main">
+                <div class="dropdown__select">Chọn thành phố</div>
+                <div class="dropdown__optionbox">
+                    <ul class="dropdown__optionlist">
+                        <li class="option">
+                            <div>Hà Nội</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>TP.Hồ Chí Minh</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>Đà Nẵng</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>Hải Phòng</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>Hải Dương</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>Nha Trang</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>Bình Định</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                        <li class="option">
+                            <div>Ninh Thuận</div>
+                            <i class="fas fa-check"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown__noti">Error message</div>
+            </div>
+        </div>
+    </div>
+    <div class="m-heading">Context menu</div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">1. Context menu</label>
+        </div>
+        <div class="cmenu">
+            <div class="cmenu__group">
+                <div class="cmenu__item">
+                    <div class="item__icon icon--history"></div>
+                    <div class="item__text">History</div>
+                </div>
+                <div class="cmenu__item">
+                    <div class="item__icon icon--download"></div>
+                    <div class="item__text">Downloads</div>
+                </div>
+                <div class="cmenu__item">
+                    <div class="item__icon icon--bookmark"></div>
+                    <div class="item__text">Bookmarks</div>
+                </div>
+                <div class="cmenu__item">
+                    <div class="item__icon icon--recent"></div>
+                    <div class="item__text">Recent tabs</div>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="cmenu__group">
+                <div class="cmenu__item">
+                    <div class="item__icon icon--share"></i></div>
+                    <div class="item__text">Share</div>
+                </div>
+                <div class="cmenu__item">
+                    <div class="item__icon icon--setting"></div>
+                    <div class="item__text">Settings</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-heading">Sidebar</div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">1. Sidebar </label>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar__main">
+                <div class="sidebar__item sidebar__item--highlight item--overview">
+                    <div class="item__icon"></div>
+                    <div class="item__text">Tổng quan</div>
+                </div>
+                <div class="sidebar__item sidebar__item--highlight  item--profile">
+                    <div class="item__icon"></div>
+                    <div class="item__text">Hồ sơ</div>
+                </div>
+                
+                <div class="sidebar__item sidebar__item--highlight item--contract">
+                    <div class="item__icon"></div>
+                    <div class="item__text">Hợp đồng</div>
+                </div>
+                <div class="sidebar__item item--overview">
+                    <div class="item__icon"></div>
+                    <div class="item__text">Tổng quan</div>
+                </div>
+                <div class="sidebar__item item--profile">
+                    <div class="item__icon"></div>
+                    <div class="item__text">Hồ sơ</div>
+                </div>
+                
+                <div class="sidebar__item item--contract">
+                    <div class="item__icon"></div>
+                    <div class="item__text">Hợp đồng</div>
+                </div>
+            
+            </div>
+            <div class="sidebar__footer">
+                <div class="item__icon"></div>
+                <div class="item__text">Thu gọn</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-heading">Combobox</div>
+    <div class="m-row margin-left20">
+        <div class="m-row">
+            <label for="">1. Combobox</label>
+        </div>
+        <div class="cbox">
+            <div class="cbox__label">Field label</div>
+            <div class="cbox__select">
+                <div class="select__box">
+                    <div class="select__input">
+                        <input type="text" value="Type here">
+                    </div>
+                    <button class="select__button"></button>
+                </div>
+                <div class="select__optionbox">
+                    <div class="optionlist">
+                        <div class="option__item item--selected">
+                            <div class="option__text">Hà Nội</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">TP.Hồ Chí Minh</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">Đà Nẵng</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">Hà Nội</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">TP.Hồ Chí Minh</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">Đà Nẵng</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">Hà Nội</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">TP.Hồ Chí Minh</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">Đà Nẵng</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">Hà Nội</div>
+                            <div class="option__icon"></div>
+                        </div>
+                        <div class="option__item">
+                            <div class="option__text">TP.Hồ Chí Minh</div>
+                            <div class="option__icon"></div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="cbox__noti"></div>
+        </div>
+    </div>
+
+    
+    <script src="../js/components.js"></script>
+</body>
+</html>

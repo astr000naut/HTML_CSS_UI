@@ -1,0 +1,108 @@
+.dropdown__label {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.dropdown__main {
+    width: 280px;
+    user-select: none;
+    position: relative;
+}
+
+.dropdown__select {
+    height: var(--h-default);
+    border: 1px solid var(--clr-t-border);
+    border-radius: var(--border-radius);
+    line-height: var(--h-default);
+    padding: 0 8px 0 12px;
+    color: var(--clr-t-border);
+    background-color: #fff;
+    background-image: url(../../assets/img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+    cursor: pointer;
+}
+
+.dropdown__select:hover {
+    background-color: var(--clr-t-bg);
+}
+
+.dropdown__select.black-text {
+    color: black;
+}
+
+.dropdown__select.active {
+    outline-style: solid;
+    outline-color: var(--clr-lg500);
+}
+
+
+.dropdown__optionbox {
+    border: 1px solid var(--clr-t-border);
+    margin-top: 2px;
+    padding: 8px;
+    background-color: #fff;
+    display: none;
+    border-radius: 8px;
+    width: 100%;
+    position: absolute;
+}
+
+.dropdown__optionbox.active {
+    display: block;
+}
+
+.dropdown__optionlist {
+    background-color: #fff;
+    list-style-type: none;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0;
+}
+
+
+.dropdown__optionlist > li {
+    cursor: pointer;
+    height: var(--h-default);
+    line-height: var(--h-default);
+    border-radius: var(--border-radius);
+}
+
+.dropdown__optionlist > li:hover {
+    background-color: var(--clr-lg100);
+}
+
+
+.dropdown__optionlist > li.selected {
+    color: var(--clr-lg500);
+}
+.dropdown__optionlist > li > i.selected {
+    display: block;
+}
+
+.dropdown__optionlist::-webkit-scrollbar {
+    width: 9px;
+    background-color: transparent;
+}
+
+.dropdown__optionlist::-webkit-scrollbar-thumb {
+    background-color: var(--clr-t-border);
+    border-radius: 8px;
+}
+
+.dropdown__optionlist > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 0 4px;
+}
+.dropdown__optionlist > li > i {
+    display: none;
+}
+
+.dropdown__noti {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
