@@ -4,6 +4,7 @@
     background-color: #fff;
     justify-content: space-between;
     position: relative;
+    user-select: none;
 }
 
 /* Top left area of header */
