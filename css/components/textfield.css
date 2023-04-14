@@ -107,13 +107,12 @@
 }
 
 .txtfield--search .txtfield__icon:hover {
-    background-color: var(--clr-t-border);
+    /* background-color: var(--clr-t-border); */
     cursor: pointer;
 }
 
 .txtfield--search .txtfield__icon:active {
-    background-color: var(--clr-t-disable);
-    cursor: pointer;
+    background-color: var(--clr-t-border);
 }
 
 

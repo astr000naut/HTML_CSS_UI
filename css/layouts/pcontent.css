@@ -1,6 +1,5 @@
 .pcontent {
-    height: calc(100vh - 56px);
-    width: calc(100vw - 200px);
+    width: 100%;
     padding: 24px;
 }
 
@@ -25,16 +24,32 @@
 .pcontent__container {
     width: 100%;
     height: calc(100vh - 164px);
+    min-height: 200px;
+    overflow: hidden;
     margin-top: 24px;
     background-color: #fff;
     /* background-color: green; */
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Search bar */
 .pcontent__searchbar {
     display: flex;
+    flex-shrink: 0;
     justify-content: flex-end;
     column-gap: 24px;
     overflow: hidden;
+}
+
+/* Tablebox */
+
+.pcontent__tablebox {
+    background-color: gray;
+    width: 100%;
+    min-height: 200px;
+    flex: 1;
+    margin-top: 24px;
 }
