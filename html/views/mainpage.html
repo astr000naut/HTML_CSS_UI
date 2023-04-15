@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách nhân viên</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                         <div class="header__brandname">
                             CÔNG TY TNNH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI PHÚC
                         </div>
-                        <div class="header__title__arrow mi mi-14 mi-header-icondown"></div>
+                        <div class="header__title__arrow mi mi-14 mi-arrowdown"></div>
                     </div>
     
                 </div>
@@ -30,7 +31,7 @@
                     <div class="header__user">
                         <div class="header__avatar"></div>
                         <div class="header__username">Nguyễn Văn Nam</div>
-                        <div class="header__user__arrow mi mi-24 mi-header-arrowdown"></div>
+                        <div class="header__user__arrow mi mi-24 mi-arrowdown-small"></div>
                     </div>
                 </div>
             </div>
@@ -126,16 +127,431 @@
                     </div>
                     
                     <div class="pcontent__tablebox">
-                        <div class="table__content">
-
+                        <div class="table__wrapper">
+                            <table class="m-table">
+                                <thead>
+                                    <tr>
+                                        <th><div class="align-center mw-40">
+                                            <div class="t__checkbox t__checkall"></div>
+                                        </div></th>
+                                        <th><div class="text-left mw-100">Mã nhân viên</div></th>
+                                        <th><div class="text-left mw-200">Tên nhân viên</div></th>
+                                        <th><div class="text-left mw-70">Giới tính</div></th>
+                                        <th><div class="text-left mw-70">Ngày sinh</div></th>
+                                        <th><div class="text-left mw-100">Số CMND</div></th>
+                                        <th><div class="text-left mw-150">Chức danh</div></th>
+                                        <th><div class="text-left mw-200">Tên đơn vị</div></th>
+                                        <th><div class="text-left mw-150">Số tài khoản</div></th>
+                                        <th><div class="text-left mw-150">Tên ngân hàng</div></th>
+                                        <th><div class="text-left mw-200">Chi nhánh TK ngân hàng</div></th>
+                                        <th><div class="text-left mw-80">Chức năng</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="tb-item align-center">
+                                            <div class="t__checkbox"></div>
+                                        </div></td>
+                                        <td><div class="tb-item text-left">M-238123</div></td>
+                                        <td><div class="tb-item text-left">Nguyễn Văn Việt</div></td>
+                                        <td><div class="tb-item text-left">Nam</div></td>
+                                        <td><div class="tb-item text-left">31/12/1999</div></td>
+                                        <td><div class="tb-item text-left">0239482842</div></td>
+                                        <td><div class="tb-item text-left">Trưởng nhóm</div></td>
+                                        <td><div class="tb-item text-left">Xay keo - Phối trộn</div></td>
+                                        <td><div class="tb-item text-left">231239485923</div></td>
+                                        <td><div class="tb-item text-left">BIDV</div></td>
+                                        <td><div class="tb-item text-left">Cầu Giấy</div></td>
+                                        <td><div class="tb-item">
+                                            <div class="t__optionbox"></div>
+                                        </div></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="table__pagination"></div>
+                        <div class="table__pag">
+                            <div class="pag__leftside">
+                                <span>Tổng số: <strong>20</strong> bản ghi</span>
+                            </div>
+                            <div class="pag__rightside">
+                                <div class="pag__recordcount">
+                                    <span>Số bản ghi / trang: 20</span>
+                                    <div class="pag__arrowdown mi mi-24 mi-arrowdown-small"></div>
+                                </div>
+                                <div class="pag__info">
+                                    <span>1 - <strong>20</strong> bản ghi</span>
+                                </div>
+                                <div class="pag__prev mi mi-24 mi-arrowleft"></div>
+                                <div class="pag__next mi mi-24 mi-arrowright"></div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="../../js/mainpage.js"></script>
 </body>
 </html>

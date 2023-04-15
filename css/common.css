@@ -18,3 +18,47 @@
     column-gap: 20px;
 }
 
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Min width */
+
+.mw-40 {
+    min-width: 40px;
+}
+
+.mw-70 {
+    min-width: 70px;
+}
+
+.mw-80 {
+    min-width: 80px;
+}
+
+.mw-100 {
+    min-width: 100px;
+}
+
+.mw-150 {
+    min-width: 150px;
+}
+
+.mw-200 {
+    min-width: 200px;
+}

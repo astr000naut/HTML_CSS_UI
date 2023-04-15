@@ -46,12 +46,32 @@
     background-position: -787px -30px;
 }
 
-.mi-header-arrowdown {
+.mi-arrowdown-small {
     background-position: -940px -356px;
 }
 
-.mi-header-icondown {
+.mi-arrowdown-small:active {
+    background-position: -940px -355px;
+}
+
+.mi-arrowdown {
     background-position: -1129px -362px;
+}
+
+.mi-arrowleft {
+    background-position: -29px -356px;
+}
+
+.mi-arrowleft:active {
+    background-position: -29px -355px;
+}
+
+.mi-arrowright {
+    background-position: -77px -356px;
+}
+
+.mi-arrowright:active {
+    background-position: -77px -355px;
 }
 
 /* Sidebar icon */

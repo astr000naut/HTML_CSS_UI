@@ -1,5 +1,7 @@
 .pcontent {
-    width: 100%;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 56px);
+    min-width: 800px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -31,7 +33,7 @@
     overflow: hidden;
     margin-top: 24px;
     background-color: #fff;
-    padding: 24px;
+    padding: 24px 24px 12px 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -49,7 +51,6 @@
 /* Tablebox */
 
 .pcontent__tablebox {
-    background-color: gray;
     width: 100%;
     min-height: 200px;
     flex: 1;
