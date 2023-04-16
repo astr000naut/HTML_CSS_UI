@@ -15,6 +15,13 @@ $(document).ready(() => {
         $(this).toggleClass('t__checkbox--checked');
     });
     
+    $("button").click(function(e) {
+        el = $("ul." + this.className).toggle();
+        
+        // add these lines
+        $('button').parent().removeClass('above');
+        $(this).parent().addClass('above');
+      })
     
 })
 
