@@ -35,7 +35,8 @@
     background-color: #fff;
     border: 1px solid var(--clr-t-border);
     user-select: none;
-    position: absolute; 
+    position: absolute;
+    box-shadow: 2px 2px 5px gray; 
     z-index: 999;
        
 }

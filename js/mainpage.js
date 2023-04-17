@@ -44,5 +44,10 @@ $(document).ready(() => {
         $(this).parent().parent().find('.dpicker__yearlist').toggleClass('display--none');
         $(this).parent().parent().find('.dpicker__daylist').toggleClass('display--none');
     })
+
+    // Combobox 
+    $('.select__button').click(function() {
+        $(this).parents().eq(2).find('.select__optionbox').toggleClass('display--none');
+    })
 })
 

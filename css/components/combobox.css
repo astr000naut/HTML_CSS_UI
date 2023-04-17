@@ -9,9 +9,6 @@
 }
 
 
-.cbox__select {
-    width: 280px;
-}
 
 .select__input {
     width: 100%;
@@ -40,13 +37,21 @@
     border-left: 1px solid var(--clr-t-border);
     background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -1118px -352px;
 }
-
+.cbox__select {
+    position: relative;
+}
 .select__optionbox {
     background-color: #fff;
     border-radius: var(--border-radius);
+    border: 1px solid var(--clr-t-border);
+    box-shadow: 4px 4px 5px var(--clr-t-bg);
     padding: 8px;
     max-height: 308px;
-    margin-top: 1px;
+    width: 100%;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    z-index: 10;
 }
 
 .optionlist {
@@ -59,6 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 4px;
 }
 
 .option__icon {
