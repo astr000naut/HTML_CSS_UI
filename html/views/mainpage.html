@@ -94,14 +94,125 @@
                     <div class="fu__right">
                         <div class="fu__right__top">
                             <div class="fu__dob">
-                                <div class="txtfield">
-                                    <div class="txtfield__label">Ngày sinh</div>
-                                    <div class="txtfield__textbox">
-                                        <input class="txtfield__input"type="text" placeholder="DD/MM/YY">
-                                        <div class="txtfield__icon"></div>
+                                <div class="dpicker">
+                                    <div class="dpicker__label">
+                                        Ngày sinh
                                     </div>
-                                    <div class="txtfield__noti">
-                                        
+                                    <div class="dpicker__selector">
+                                        <div class="dpicker__input">
+                                            <input type="text" placeholder="DD/MM/YYYY">
+                                            <div class="dpicker__icon mi mi-24 mi-calendar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dpicker__box display--none">
+                                        <div class="dpicker__header">
+                                            <div class="dp__header__left">
+                                                <div class="dp__date">Tháng 5, 2019</div>
+                                                <div class="dp__expandic mi mi-14 mi-arrowdown"></div>
+                                            </div>
+                                            <div class="dp__header__right">
+                                                <div class="dp__prev mi mi-24 mi-arrowleft"></div>
+                                                <div class="dp__next mi mi-24 mi-arrowright"></div>
+                                            </div>
+                                        </div>
+                                        <div class="dpicker__body">
+                                            <div class="dpicker__yearlist display--none">
+                                                <div class="yearlist__tablebox">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><div class="year-item"></div>2023</td>
+                                                                <td><div class="year-item"></div>2022</td>
+                                                                <td><div class="year-item"></div>2021</td>
+                                                                <td><div class="year-item"></div>2020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="year-item"></div>2019</td>
+                                                                <td><div class="year-item"></div>2018</td>
+                                                                <td><div class="year-item"></div>2017</td>
+                                                                <td><div class="year-item"></div>2016</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="year-item"></div>2015</td>
+                                                                <td><div class="year-item"></div>2014</td>
+                                                                <td><div class="year-item"></div>2013</td>
+                                                                <td><div class="year-item"></div>2012</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="dpicker__cancelbox">
+                                                    <button class="dp__cancel">Hủy bỏ</button>
+                                                </div>
+                                            </div>
+                                            <div class="dpicker__daylist">
+                                                <div class="daylist__table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>T2</th>
+                                                                <th>T3</th>
+                                                                <th>T4</th>
+                                                                <th>T5</th>
+                                                                <th>T6</th>
+                                                                <th>T7</th>
+                                                                <th>CN</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><div class="date__item"></div></td>
+                                                                <td><div class="date__item"></div></td>
+                                                                <td><div class="date__item"></div>1</td>
+                                                                <td><div class="date__item"></div>2</td>
+                                                                <td><div class="date__item"></div>3</td>
+                                                                <td><div class="date__item"></div>4</td>
+                                                                <td><div class="date__item"></div>5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>6</td>
+                                                                <td><div class="date__item"></div>7</td>
+                                                                <td><div class="date__item"></div>8</td>
+                                                                <td><div class="date__item"></div>9</td>
+                                                                <td><div class="date__item"></div>10</td>
+                                                                <td><div class="date__item"></div>11</td>
+                                                                <td><div class="date__item"></div>12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>13</td>
+                                                                <td><div class="date__item"></div>14</td>
+                                                                <td><div class="date__item"></div>15</td>
+                                                                <td><div class="date__item"></div>16</td>
+                                                                <td><div class="date__item"></div>17</td>
+                                                                <td><div class="date__item"></div>18</td>
+                                                                <td><div class="date__item"></div>19</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>20</td>
+                                                                <td><div class="date__item"></div>21</td>
+                                                                <td><div class="date__item"></div>22</td>
+                                                                <td><div class="date__item"></div>23</td>
+                                                                <td><div class="date__item"></div>24</td>
+                                                                <td><div class="date__item"></div>25</td>
+                                                                <td><div class="date__item"></div>26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>27</td>
+                                                                <td><div class="date__item"></div>28</td>
+                                                                <td><div class="date__item"></div>29</td>
+                                                                <td><div class="date__item"></div>30</td>
+                                                                <td><div class="date__item"></div>31</td>
+                                                                <td><div class="date__item"></div></td>
+                                                                <td><div class="date__item"></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="dpicker__curdate">
+                                                    <button class="dp__now">Hôm nay</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -141,14 +252,125 @@
                                 </div>
                             </div>
                             <div class="fu__cmdndate">
-                                <div class="txtfield">
-                                    <div class="txtfield__label">Ngày cấp</div>
-                                    <div class="txtfield__textbox">
-                                        <input class="txtfield__input"type="text" placeholder="DD/MM/YY">
-                                        <div class="txtfield__icon"></div>
+                                <div class="dpicker">
+                                    <div class="dpicker__label">
+                                        Ngày cấp
                                     </div>
-                                    <div class="txtfield__noti">
-                                        
+                                    <div class="dpicker__selector">
+                                        <div class="dpicker__input">
+                                            <input type="text" placeholder="DD/MM/YYYY">
+                                            <div class="dpicker__icon mi mi-24 mi-calendar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dpicker__box display--none">
+                                        <div class="dpicker__header">
+                                            <div class="dp__header__left">
+                                                <div class="dp__date">Tháng 5, 2019</div>
+                                                <div class="dp__expandic mi mi-14 mi-arrowdown"></div>
+                                            </div>
+                                            <div class="dp__header__right">
+                                                <div class="dp__prev mi mi-24 mi-arrowleft"></div>
+                                                <div class="dp__next mi mi-24 mi-arrowright"></div>
+                                            </div>
+                                        </div>
+                                        <div class="dpicker__body">
+                                            <div class="dpicker__yearlist">
+                                                <div class="yearlist__tablebox">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><div class="year-item"></div>2023</td>
+                                                                <td><div class="year-item"></div>2022</td>
+                                                                <td><div class="year-item"></div>2021</td>
+                                                                <td><div class="year-item"></div>2020</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="year-item"></div>2019</td>
+                                                                <td><div class="year-item"></div>2018</td>
+                                                                <td><div class="year-item"></div>2017</td>
+                                                                <td><div class="year-item"></div>2016</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="year-item"></div>2015</td>
+                                                                <td><div class="year-item"></div>2014</td>
+                                                                <td><div class="year-item"></div>2013</td>
+                                                                <td><div class="year-item"></div>2012</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="dpicker__cancelbox">
+                                                    <button class="dp__cancel">Hủy bỏ</button>
+                                                </div>
+                                            </div>
+                                            <div class="dpicker__daylist">
+                                                <div class="daylist__table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>T2</th>
+                                                                <th>T3</th>
+                                                                <th>T4</th>
+                                                                <th>T5</th>
+                                                                <th>T6</th>
+                                                                <th>T7</th>
+                                                                <th>CN</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><div class="date__item"></div></td>
+                                                                <td><div class="date__item"></div></td>
+                                                                <td><div class="date__item"></div>1</td>
+                                                                <td><div class="date__item"></div>2</td>
+                                                                <td><div class="date__item"></div>3</td>
+                                                                <td><div class="date__item"></div>4</td>
+                                                                <td><div class="date__item"></div>5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>6</td>
+                                                                <td><div class="date__item"></div>7</td>
+                                                                <td><div class="date__item"></div>8</td>
+                                                                <td><div class="date__item"></div>9</td>
+                                                                <td><div class="date__item"></div>10</td>
+                                                                <td><div class="date__item"></div>11</td>
+                                                                <td><div class="date__item"></div>12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>13</td>
+                                                                <td><div class="date__item"></div>14</td>
+                                                                <td><div class="date__item"></div>15</td>
+                                                                <td><div class="date__item"></div>16</td>
+                                                                <td><div class="date__item"></div>17</td>
+                                                                <td><div class="date__item"></div>18</td>
+                                                                <td><div class="date__item"></div>19</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>20</td>
+                                                                <td><div class="date__item"></div>21</td>
+                                                                <td><div class="date__item"></div>22</td>
+                                                                <td><div class="date__item"></div>23</td>
+                                                                <td><div class="date__item"></div>24</td>
+                                                                <td><div class="date__item"></div>25</td>
+                                                                <td><div class="date__item"></div>26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div class="date__item"></div>27</td>
+                                                                <td><div class="date__item"></div>28</td>
+                                                                <td><div class="date__item"></div>29</td>
+                                                                <td><div class="date__item"></div>30</td>
+                                                                <td><div class="date__item"></div>31</td>
+                                                                <td><div class="date__item"></div></td>
+                                                                <td><div class="date__item"></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="dpicker__curdate">
+                                                    <button class="dp__now">Hôm nay</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

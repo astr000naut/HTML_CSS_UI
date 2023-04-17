@@ -23,3 +23,15 @@ options.forEach((option) => {
         
     })
 });
+
+$(document).ready(() => {
+    $('.dpicker__icon').click(function() { 
+        $('.dpicker__box').toggleClass('display--none');
+    });
+
+    $('.dp__header__left').click(function() {
+        $(this).parent().parent().find('.dpicker__yearlist').toggleClass('display--none');
+        $(this).parent().parent().find('.dpicker__daylist').toggleClass('display--none');
+    })
+    
+})

@@ -36,5 +36,13 @@ $(document).ready(() => {
         $(this).toggleClass('mi-checkbox-checked');
     });
     
+    $('.dpicker__icon').click(function() { 
+        $(this).parent().parent().parent().find('.dpicker__box').toggleClass('display--none');
+    });
+
+    $('.dp__header__left').click(function() {
+        $(this).parent().parent().find('.dpicker__yearlist').toggleClass('display--none');
+        $(this).parent().parent().find('.dpicker__daylist').toggleClass('display--none');
+    })
 })
 

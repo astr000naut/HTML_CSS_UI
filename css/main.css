@@ -8,6 +8,7 @@
 @import url(./components/contextmenu.css);
 @import url(./components/radio.css);
 @import url(./components/combobox.css);
+@import url(./components/datepicker.css);
 
 @import url(./patterns/sidebar.css);
 @import url(./patterns/dialog.css);

@@ -174,3 +174,12 @@
 .mi-checkbox-checked {
     background-position: -1223px -360px;
 }
+
+/* Other */
+.mi-calendar {
+    background-position: -124px -308px;
+}
+
+.mi-calendar:hover {
+    background-position: -124px -307px;
+}
