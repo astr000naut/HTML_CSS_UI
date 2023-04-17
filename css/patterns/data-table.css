@@ -22,6 +22,7 @@
     background-color: #e5e8ec;
     position: sticky;
     top: -1px;
+    z-index: 2;
 }
 
 .m-table tbody tr {
@@ -55,23 +56,55 @@
     border-left: 1px solid #c7c7c7;
 }
 
-ul {
-    display: none;
-    list-style-type: none;
+.t__optionbox {
+    display: flex;
+}
+
+.t__optionbox button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .actions-list {
     position: absolute;
-    border: 1px solid black;
-    height: 200px;
-    width: 100px;
+    border: 1px solid var(--clr-t-border);
+    display: none;
+    list-style-type: none;
     top: 36px;
-    right: 0;
-    background-color: pink;
-  }
+    width: 130px;
+    right: 5px;
+    background-color: #fff;
+}
+
+.activee {
+    display: block;
+}
+
+
+.actions-list > li:hover {
+    background-color: var(--clr-t-border);
+    color: var(--clr-lg500);
+    cursor: pointer;
+}
 
 .above {
     z-index: 1;
+}
+
+.btn__expand {
+    background-position: -896px -358px;
+    margin-left: 5px;
+}
+
+.li-data {
+    padding: 8px;
+}
+
+
+.option__edit {
+    color: rgb(55, 127, 223);
+    font-weight: 500;
 }
 
 

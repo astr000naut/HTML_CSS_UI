@@ -11,17 +11,21 @@ $(document).ready(() => {
         }
     });
 
-    $('.m-table thead tr .t__checkbox').click(function() { 
-        $(this).toggleClass('t__checkbox--checked');
-    });
+
+
     
-    $("button").click(function(e) {
-        el = $("ul." + this.className).toggle();
-        
-        // add these lines
-        $('button').parent().removeClass('above');
-        $(this).parent().addClass('above');
-      })
+    $(".btn__expand").click(function(e) {
+        $(".actions-list").removeClass('activee');
+        $(this).next().toggleClass("activee");
+
+        $(".t__optionbox").parent().removeClass('above');
+        $(this).parent().parent().toggleClass('above');
+    })
+    $('.actions-list').on("mouseleave", function(e) {
+        $(this).removeClass("activee");
+        $(this).parent().parent().removeClass('above');
+    })
+     
     
 })
 
