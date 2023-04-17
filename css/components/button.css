@@ -8,6 +8,7 @@
     border: unset;
     border-radius: var(--border-radius);
     font-weight: 500;
+    cursor: pointer;
     overflow: hidden;
 }
 
@@ -100,17 +101,9 @@
 
 .btn--help {
     width: var(--h-default);
-    background: var(--clr-lg50) url(../../assets/img/Sprites.64af8f61.svg) no-repeat -82px -138px;
+    background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -82px -138px;
 } 
 
-.btn--help:hover {
-    background-color: var(--clr-lg100);
-    cursor: pointer;
-}
-
-.btn--help:active {
-    background-color: var(--clr-lg300);
-}
 
 /* Icon button - Close */
 
@@ -119,12 +112,4 @@
     background: url(../../assets/img/Sprites.64af8f61.svg) no-repeat -139px -139px;
 } 
 
-.btn--close:hover {
-    background-color: var(--clr-t-bg);
-    cursor: pointer;
-}
-
-.btn--close:active {
-    background-color: var(--clr-t-border);
-}
 

@@ -8,7 +8,7 @@
 
 .txtfield__textbox {
     height: var(--h-default);
-    width: 280px;
+    min-width: 120px;
     position: relative;
 }
 

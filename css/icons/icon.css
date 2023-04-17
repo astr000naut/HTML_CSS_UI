@@ -17,6 +17,13 @@
     min-height: 16px;
 }
 
+.mi-18 {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
+}
+
 .mi-24 {
     width: 24px;
     height: 24px;
@@ -165,5 +172,5 @@
 /* Check box */
 
 .mi-checkbox-checked {
-    background-position: -1225px -363px;
+    background-position: -1223px -360px;
 }

@@ -5,69 +5,266 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="form__wrapper">
         <div class="form">
-            <div class="form__heading">
-                Đăng ký tài khoản
-            </div>
-            <div class="form__container">
-                <div class="form__item">
-                    <div class="txtfield">
-                        <div class="txtfield__label">Họ và tên</div>
-                        <div class="txtfield__textbox">
-                            <input class="txtfield__input"type="text" placeholder="Họ tên đầy đủ">
-                            <div class="txtfield__icon"></div>
-                        </div>
-                        <div class="txtfield__noti"></div>
+            <div class="form__header">
+                <div class="header__left">
+                    <div class="header__title">Thông tin nhân viên</div>
+                    <div class="header__option1">
+                        <div class="checkbox mi mi-18"></div>
+                        <div class="checkbox__label">Là khách hàng</div>
+                    </div>
+                    <div class="header__option2">
+                        <div class="checkbox mi mi-18"></div>
+                        <div class="checkbox__label">Là nhà cung cấp</div>
                     </div>
                 </div>
-                <div class="form__item">
-                    <div class="radio">
-                        <div class="radio__label">Giới tính</div>
-                        <div class="radio__container">
-                            <div class="radio__item">
-                                <input type="radio" name="radio" id="">
-                                <label for="">Nam</label>
-                            </div>
-                            <div class="radio__item">
-                                <input type="radio" name="radio" id="">
-                                <label for="">Nữ</label>
-                            </div>
-
-                        </div>
+                <div class="header__right">
+                    <div class="header__help">
+                        <button class="btn btn--medium btn--help"></button> 
                     </div>
-                </div>
-                <div class="form__item">
-                    <div class="txtfield">
-                        <div class="txtfield__label">Ngày sinh</div>
-                        <div class="txtfield__textbox">
-                            <input class="txtfield__input"type="text" placeholder="dd/mm/yy">
-                            <div class="txtfield__icon"></div>
-                        </div>
-                        <div class="txtfield__noti"></div>
-                    </div>
-                </div>
-                <div class="form__item">
-                    <div class="txtfield">
-                        <div class="txtfield__label">Địa chỉ email</div>
-                        <div class="txtfield__textbox">
-                            <input class="txtfield__input"type="text" placeholder="example@email.com">
-                            <div class="txtfield__icon"></div>
-                        </div>
-                        <div class="txtfield__noti"></div>
+                    <div class="header__close">
+                        <button class="btn btn--medium btn--close"></button> 
                     </div>
                 </div>
             </div>
+            <div class="form__body">
+                <div class="form__upper">
+                    <div class="fu__left">
+                        <div class="fu__left__top">
+                            <div class="fu__index">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Mã</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fu__name">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Tên</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fu__left__mid">
+                            <div class="fu__unit">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Đơn vị</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fu__left__bot">
+                            <div class="fu__position">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Chức danh</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fu__right">
+                        <div class="fu__right__top">
+                            <div class="fu__dob">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Ngày sinh</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="DD/MM/YY">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fu__gender">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Giới tính</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fu__right__mid">
+                            <div class="fu__cmnd">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Số CMND</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fu__cmdndate">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Ngày cấp</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="DD/MM/YY">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fu__right__bot">
+                            <div class="fu__cmndpos">
+                                <div class="txtfield">
+                                    <div class="txtfield__label">Nơi cấp</div>
+                                    <div class="txtfield__textbox">
+                                        <input class="txtfield__input"type="text" placeholder="">
+                                        <div class="txtfield__icon"></div>
+                                    </div>
+                                    <div class="txtfield__noti">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+             
+                <div class="form__lower">
+                    <div class="fl__top">
+                        <div class="fl__address">
+                            <div class="txtfield">
+                                <div class="txtfield__label">Địa chỉ</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl__mid">
+                        <div class="fl__phone">
+                            <div class="txtfield">
+                                <div class="txtfield__label">ĐT di động</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fl__homephone">
+                            <div class="txtfield">
+                                <div class="txtfield__label">ĐT cố định</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fl__email">
+                            <div class="txtfield">
+                                <div class="txtfield__label">Email</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl__bot">
+                        <div class="fl__bankacc">
+                            <div class="txtfield">
+                                <div class="txtfield__label">Tài khoản ngân hàng</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fl__bankname">
+                            <div class="txtfield">
+                                <div class="txtfield__label">Tên ngân hàng</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fl__bankarea">
+                            <div class="txtfield">
+                                <div class="txtfield__label">Chi nhánh</div>
+                                <div class="txtfield__textbox">
+                                    <input class="txtfield__input"type="text" placeholder="">
+                                    <div class="txtfield__icon"></div>
+                                </div>
+                                <div class="txtfield__noti">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="form__footer">
-                <button class="btn btn--medium btn--secondary">Hủy</button>
-                <button class="btn btn--medium btn--primary">Đăng ký</button>
-
+                <div class="footer__left">
+                    <button class="btn btn--medium btn--secondary">Hủy</button>
+                </div>
+                <div class="footer__right">
+                    <button class="btn btn--medium btn--secondary">Cất</button>
+                    <button class="btn btn--medium btn--primary">Cất và Thêm</button>
+                </div>
             </div>
         </div>
     </div>
-    
+    <script src="../../js/form.js"></script>
 </body>
 </html>

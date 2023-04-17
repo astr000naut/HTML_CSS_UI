@@ -11,8 +11,6 @@ $(document).ready(() => {
         }
     });
 
-
-
     
     $(".btn__expand").click(function(e) {
         $(".actions-list").removeClass('activee');
@@ -25,7 +23,18 @@ $(document).ready(() => {
         $(this).removeClass("activee");
         $(this).parent().parent().removeClass('above');
     })
+
+    $(".form__wrapper .btn--close").click(function(e) {
+        $(".form__wrapper").addClass("form__wrapper--off");
+    })
      
+    $(".pcontent__heading button").click(function(e) {
+        $(".form__wrapper").removeClass("form__wrapper--off");
+    })
+
+    $('.checkbox').click(function() { 
+        $(this).toggleClass('mi-checkbox-checked');
+    });
     
 })
 
