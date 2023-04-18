@@ -48,6 +48,9 @@
     overflow: hidden;
 }
 
+.pcontent__searchbar .txtfield__input {
+    width: 300px;
+}
 /* Tablebox */
 
 .pcontent__tablebox {
