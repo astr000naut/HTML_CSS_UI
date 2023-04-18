@@ -32,3 +32,12 @@ function getName(name) {
         
     }
 }
+
+/**
+ * Description
+ * @param {type} p1 ....
+ * @param {type} p2 ....
+ * @returns {type} ...
+ * Author: NVMANH (18/04/2023)
+ * Modifier: NVMANH(19/04/2023) - sua loi sao ten tham so
+ */
