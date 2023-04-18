@@ -35,7 +35,6 @@ function btnAddOnclick() {
     
 
     // Luu y: Co refactor code
-    
 }
 
 /**
@@ -66,9 +65,28 @@ function validateData() {
     // Kiểm tra ngày tháng năm sinh không được lớn hơn ngày tháng hiện tại
     
     // Kiểm tra độ dài chuỗi kí tự (nếu có)
-
-
-
-
 }
- 
+
+/**
+ * Lấy ra tên nhân viên
+ * @param {string} name ten nhan vien
+ * @returns {string} ten nhan vien
+ * Author: NVMANH (18/04/2023)
+ * Modifier: NVMANH(19/04/2023) - sua loi sao ten tham so
+ */
+function getName(name) {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
+
+/**
+ * Description
+ * @param {type} p1 ....
+ * @param {type} p2 ....
+ * @returns {type} ...
+ * Author: NVMANH (18/04/2023)
+ * Modifier: NVMANH(19/04/2023) - sua loi sao ten tham so
+ */
