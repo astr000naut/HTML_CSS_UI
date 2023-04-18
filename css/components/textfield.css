@@ -115,6 +115,9 @@
     background-color: var(--clr-t-border);
 }
 
+.require-asterisk {
+    color: red;
+}
 
 
 
