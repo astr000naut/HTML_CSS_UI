@@ -27,12 +27,12 @@ $(document).ready(() => {
         $(this).parent().parent().removeClass('above');
     })
 
-    $(".form__wrapper .btn--close").click(function(e) {
-        $(".form__wrapper").addClass("form__wrapper--off");
+    $(".wrapper .btn--close").click(function(e) {
+        $(".wrapper").addClass("wrapper--off");
     })
      
     $(".pcontent__heading button").click(function(e) {
-        $(".form__wrapper").removeClass("form__wrapper--off");
+        $(".wrapper").removeClass("wrapper--off");
     })
 
     $('.checkbox').click(function() { 
