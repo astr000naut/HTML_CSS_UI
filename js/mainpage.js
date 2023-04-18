@@ -11,6 +11,9 @@ $(document).ready(() => {
         }
     });
 
+    $('.pag__arrowdown').click(function() {
+        $(this).parent().find('.record__amount__select').toggleClass('display--none');
+    })
     
     $(".btn__expand").click(function(e) {
         $(".actions-list").removeClass('activee');

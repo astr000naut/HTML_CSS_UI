@@ -140,6 +140,35 @@
     display: flex;
     align-items: center;
     column-gap: 5px;
+    padding: 0 12px;
+    position: relative;
+}
+
+.record__amount__select {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--clr-t-border);
+    box-shadow: 2px 2px 4px gray;
+    position: absolute;
+    bottom: calc(100% + 14px);
+}
+
+.record__amount__select > ul {
+    list-style-type: none;
+    padding: 4px 0;
+}
+
+.record__amount__option {
+    height: 36px;
+    line-height: 36px;
+    padding-left: 8px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.amount--selected {
+    color: #fff;
+    background-color: var(--clr-lg500);
 }
 
 
@@ -175,6 +204,10 @@
 
 .tr--selected {
     background-color: #b7d9f8 !important;
+}
+
+.record__amount__option:not(.amount--selected):hover {
+    background-color: var(--clr-lg200);
 }
 
 
