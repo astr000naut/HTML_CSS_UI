@@ -11,7 +11,10 @@ function initEvents() {
   try {
     // Sự kiện cho các Button
     const addEmployeeBtn = document.querySelector('.pcontent__heading > .btn__add');
-    addEmployeeBtn.addEventListener("click", addEmployeeBtnClickListener);
+    addEmployeeBtn.addEventListener("click", () => {toggleElement('.form__wrapper')});
+
+    const formCloseBtn = document.querySelector('.form__header .header__close button');
+    formCloseBtn.addEventListener("click", () => {toggleElement('.form__wrapper')});
 
   } catch (error) {
     console.log(error);
@@ -20,12 +23,12 @@ function initEvents() {
 
 
 /**
- * Xử lý sự kiện click cho button Thêm mới nhân viên
+ * Ẩn / hiện element
  * Author: astr000naut (18/04/2023)
- * Modyfied: none
+ * Modified: none
  */
-function addEmployeeBtnClickListener() {
-  const formWrapper = document.querySelector('.form__wrapper');
-  formWrapper.classList.toggle('form__wrapper--off');
+function toggleElement(selectorParams) {
+  const element = document.querySelector(selectorParams);
+  element.classList.toggle('display--none');
 }
 

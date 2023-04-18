@@ -8,9 +8,6 @@
     z-index: 9999;
 }
 
-.form__wrapper--off {
-    display: none;
-}
 
 .form {
     width: 1000px;
