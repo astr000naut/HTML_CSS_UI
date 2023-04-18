@@ -178,3 +178,8 @@
 .dp__cancel:hover {
     background-color: var(--clr-lg600);
 }
+
+.dpicker__input input:focus {
+    outline: none;
+    border: 1px solid var(--clr-lg500);
+}
