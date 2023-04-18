@@ -122,7 +122,8 @@
     display: none;
 }
 
-
-
+.select__button:focus {
+    outline: none;
+}
 
 

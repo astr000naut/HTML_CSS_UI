@@ -16,3 +16,7 @@
     accent-color: rgb(19, 155, 19);
     transform: translate(4px, 4px);
 }
+
+.radio__item > input[type="radio"]:focus {
+    outline-color: var(--clr-lg500);
+}
