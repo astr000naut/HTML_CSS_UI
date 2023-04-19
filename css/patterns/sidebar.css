@@ -9,6 +9,7 @@
     justify-content: space-between;
     user-select: none;
     transform: translate3d(0, 0, 0);
+    z-index: 20;
 }
 
 .sidebar__main {
@@ -51,6 +52,26 @@
     padding-left: 24px;
     column-gap: 12px;
     border-top: 1px solid var(--clr-t-setext);
+}
+
+.item__hoverbox {
+    background-color: #393a3d;
+    border-radius: 4px;
+    padding: 12px;
+    position: absolute;
+    width:max-content;
+    left: 85px;
+}
+
+.item__hoverbox .hover__arrow {
+    width: 10px;
+    height: 10px;
+    background-color: #393a3d;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    
 }
 
 .sidebar__item:hover {

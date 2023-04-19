@@ -48,6 +48,26 @@ const sidebarHandler = {
     
   },
 
+  itemHover: (e) => {
+    const item = e.currentTarget;
+    const iconResize = func.getEl('.sidebar__footer .item__icon');
+    const type = iconResize.classList.contains('mi-sidebar-left-arrow') ? 'big' : 'small';
+    if (type == 'small') {
+      const hoverBox = item.querySelector('.item__hoverbox');
+      hoverBox.classList.remove('display--none');
+    }
+  },
+
+  itemMouseout: (e) => {
+    const item = e.currentTarget;
+    const iconResize = func.getEl('.sidebar__footer .item__icon');
+    const type = iconResize.classList.contains('mi-sidebar-left-arrow') ? 'big' : 'small';
+    if (type == 'small') {
+      const hoverBox = item.querySelector('.item__hoverbox');
+      hoverBox.classList.add('display--none');
+    }
+  }
+
 }
 
 export {sidebarHandler}

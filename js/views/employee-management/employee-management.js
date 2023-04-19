@@ -20,16 +20,20 @@ function initEvents() {
 // INIT EVENTS MAIN PAGE
 
 function initSidebarEvents() {
-  // sidebar item
+  // sidebar item click and hover
   const items = func.getElAll('.sidebar__item');
   items.forEach(item => {
     item.addEventListener('click', sidebarHandler.itemClick);
+    item.addEventListener('mouseover', sidebarHandler.itemHover);
+    item.addEventListener('mouseout', sidebarHandler.itemMouseout);
   })
 
   // sidebar resize
   const itemResize = func.getEl('.sidebar__footer');
   itemResize.addEventListener('click', sidebarHandler.itemResizeClick);
 
+
+  
 
 }
 
