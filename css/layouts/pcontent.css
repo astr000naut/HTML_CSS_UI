@@ -1,5 +1,4 @@
 .pcontent {
-    width: calc(100vw - 200px);
     height: calc(100vh - 56px);
     min-width: 800px;
     padding: 24px;

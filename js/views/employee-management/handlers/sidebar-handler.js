@@ -10,8 +10,43 @@ const sidebarHandler = {
   },
 
   itemResizeClick: (e) => {
+
+    const iconResize = func.getEl('.sidebar__footer .item__icon');
+    const type = iconResize.classList.contains('mi-sidebar-left-arrow') ? 'big' : 'small';
+    const headerSidearea = func.getEl('.header__sidearea');
+    const itemTexts = func.getElAll('.sidebar .item__text');
+    const sidebar = func.getEl('.sidebar');
+    // Change footer icon
+    if (type == 'big') {
+      iconResize.classList.remove('mi-sidebar-left-arrow');
+      iconResize.classList.add('mi-sidebar-right-arrow');
+
+      //Resize header
+      const applogoEl = func.getEl('.header__applogo');
+      applogoEl.remove();
+      headerSidearea.style.flexBasis = '78px';
+      headerSidearea.style.paddingLeft = '0px';
+      // Resize Sidebar
+      
+      itemTexts.forEach(item => {
+        item.innerText = "";
+      })
+      sidebar.style.flexBasis = '78px';
+    } else {
+      iconResize.classList.remove('mi-sidebar-right-arrow');
+      iconResize.classList.add('mi-sidebar-left-arrow');
+      // Resize header
+      headerSidearea.style.flexBasis = '200px';
+      headerSidearea.style.paddingLeft = '16px';
+      headerSidearea.insertAdjacentHTML('beforeend', '<div class="header__applogo"></div>');
+      // Resize Sidebar
+      itemTexts.forEach(item => {
+        item.innerText = item.dataset.text;
+      })
+      sidebar.style.flexBasis = '200px';
+    }
     
-  }
+  },
 
 }
 

@@ -1,5 +1,6 @@
 .sidebar {
-    min-width: 200px;
+    flex-basis: 200px;
+    flex-shrink: 0;
     height: calc(100vh - 56px);
     font-weight: 400;
     background-color: #393a3d;

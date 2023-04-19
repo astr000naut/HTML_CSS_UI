@@ -1,4 +1,5 @@
 .header {
+    display: flex;
     height: 56px;
     width: 100%;
     background-color: #fff;
@@ -10,11 +11,12 @@
 /* Top left area of header */
 
 .header__sidearea {
-    width: 200px;
+    flex-basis: 200px;
     height: 100%;
     display: flex;
     background-color: #393a3d;
     align-items: center;
+    justify-content: center;
     column-gap: 16px;
     padding-left: 16px;
 }
@@ -31,15 +33,15 @@
 /* Main area of header */
 
 .header__mainarea {
+    flex: 2;
     height: 100%;
-    flex: 1;
     display: flex;
     justify-content: space-between;
     padding-right: 16px;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     right: 0;
-    left: 200px;
+    left: 200px; */
 }
 
 .header__leftarea {

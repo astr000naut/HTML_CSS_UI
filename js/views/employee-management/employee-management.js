@@ -26,6 +26,10 @@ function initSidebarEvents() {
     item.addEventListener('click', sidebarHandler.itemClick);
   })
 
+  // sidebar resize
+  const itemResize = func.getEl('.sidebar__footer');
+  itemResize.addEventListener('click', sidebarHandler.itemResizeClick);
+
 
 }
 
