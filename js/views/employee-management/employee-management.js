@@ -1,3 +1,4 @@
+import Handler from "./employee-management-handlers";
 
 initEvents();
 
@@ -57,13 +58,31 @@ function initEmployeeFormEvents() {
   const catVaThemBtn = getEl('.form__footer .footer__right .btn--primary');
   catVaThemBtn.addEventListener('click', formCatVaThemBtnClickHandler);
 
+  // cbox button
+  const cboxBtn = getEl('.cbox button');
+  cboxBtn.addEventListener('click', cboxBtnClickhandler);
+
   // TEXTFIELD
   const requiredInputs = getElAll('.field--required input');
-  for (let i = 0; i < requiredInputs.length; ++ i) {
-    requiredInputs[i].addEventListener('keyup', requireInputKeyupHandler);
-  }
+  requiredInputs.forEach(requireInput => {
+    requireInput.addEventListener('keyup', requireInputKeyupHandler);
+  })
 
   // COMBOBOX
+
+
+  // CHECKBOX
+  const checkboxs = getElAll('.form__header .checkbox');
+  checkboxs.forEach(checkbox => {
+    checkbox.addEventListener('click', checkboxClickHandler);
+  })
+
+  // DATEPICKER
+  const datepickerIcons = getElAll('.dpicker__icon');
+  datepickerIcons.forEach(icon => {
+    icon.addEventListener('click', datePickerIconClickHandler);
+  })
+
 
 }
 
@@ -99,7 +118,6 @@ function addEmployeeBtnClickHandler() {
 }
 
 function formCloseBtnClickHandler() {
-  console.log(checkFormHasInput('.wrapper--form'));
   if (checkFormHasInput('.wrapper--form')) {
     // hien thi dialog xac minh
     showElement('.wrapper--dialog');
@@ -146,6 +164,25 @@ function requireInputKeyupHandler(e) {
   const textField = e.target;
   const parent = textField.closest('.field--required');
   validator.notEmptyCheckByElement(parent);
+}
+
+function checkboxClickHandler(e) {
+  const checkbox = e.target;
+  checkbox.classList.toggle('mi-checkbox-checked');
+}
+
+function datePickerIconClickHandler(e) {
+  const icon = e.target;
+  const dpicker = icon.closest('.dpicker');
+  const dpickerBox = dpicker.querySelector('.dpicker__box');
+  dpickerBox.classList.toggle('display--none');
+
+}
+
+function cboxBtnClickhandler(e) {
+  const btn = e.target;
+  const cboxSelect = btn.closest('.cbox__select');
+  cboxSelect.querySelector('.select__optionbox').classList.toggle('display--none');
 }
 
 // FUNCTION
