@@ -69,10 +69,11 @@ function validateData() {
 
 /**
  * Lấy ra tên nhân viên
- * @param {string} name ten nhan vien
- * @returns {string} ten nhan vien
- * Author: NVMANH (18/04/2023)
- * Modifier: NVMANH(19/04/2023) - sua loi sao ten tham so
+ * 
+ * @param {type} name ten nhan vien
+ * @returns {type} ten nhan vien
+ * 
+ * Author: Dũng (19/04/2023)
  */
 function getName(name) {
     try {
