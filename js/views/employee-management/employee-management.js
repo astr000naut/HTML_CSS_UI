@@ -1,37 +1,38 @@
-import Handler from "./employee-management-handlers";
+import * as func from "./functions/function.js";
+import { formHandler } from "./handlers/form-handler.js";
+import { contentHandler } from "./handlers/content-handler.js";
+import { sidebarHandler } from "./handlers/sidebar-handler.js";
 
 initEvents();
 
 function initEvents() {
   try {
-
-    // MAIN PAGE
-    // sidebar
-
-    // heading 
-    
-    // content
     initContentEvents();
-
-    // EMPLOYEE FORM 
-    initEmployeeFormEvents();
-
-    
-    // DIALOG
-    initDialogEvents();
+    initFormEvents();
+    initSidebarEvents();
 
   } catch (error) {
     console.log(error);
   }
 }
 
+
 // INIT EVENTS MAIN PAGE
 
-function initContentEvents() {
+function initSidebarEvents() {
+  // sidebar item
+  const items = func.getElAll('.sidebar__item');
+  items.forEach(item => {
+    item.addEventListener('click', sidebarHandler.itemClick);
+  })
 
+
+}
+
+function initContentEvents() {
   // main - titlebar - button
-  const addEmployeeBtn = getEl('.pcontent__heading .btn__add');
-  addEmployeeBtn.addEventListener('click', addEmployeeBtnClickHandler);
+  const btnAddEmployee = func.getEl('.pcontent__heading .btn__add');
+  btnAddEmployee.addEventListener('click', contentHandler.btnAddEmployeeClick);
   // main - toolbar
 
   // main - table
@@ -41,232 +42,64 @@ function initContentEvents() {
 
 // INIT EVENTS EMPLOYEE FORM
 
-function initEmployeeFormEvents() {
+function initFormEvents() {
   // BUTTON
   // close button
-  const formCloseBtn = getEl('.form__header .btn--close');
-  formCloseBtn.addEventListener('click', formCloseBtnClickHandler);
+  const btnClose = func.getEl('.form__header .btn--close');
+  btnClose.addEventListener('click', formHandler.btnCloseClick);
+
   // cancel button
-  const formCancelBtn = getEl('.form__footer .footer__left .btn--secondary');
-  formCancelBtn.addEventListener('click', formCancelBtnClickHandler);
+  const btnCancel = func.getEl('.form__footer .footer__left .btn--secondary');
+  btnCancel.addEventListener('click', formHandler.btnCancelClick);
 
   // cat button
-  const formCatBtn = getEl('.form__footer .footer__right .btn--secondary');
-  formCatBtn.addEventListener('click', formCatBtnClickHandler);
+  const btnCat = func.getEl('.form__footer .footer__right .btn--secondary');
+  btnCat.addEventListener('click', formHandler.btnCatClick);
 
   // catvathem button
-  const catVaThemBtn = getEl('.form__footer .footer__right .btn--primary');
-  catVaThemBtn.addEventListener('click', formCatVaThemBtnClickHandler);
+  const btnCatvathem = func.getEl('.form__footer .footer__right .btn--primary');
+  btnCatvathem.addEventListener('click', formHandler.btnCatvathemClick);
 
-  // cbox button
-  const cboxBtn = getEl('.cbox button');
-  cboxBtn.addEventListener('click', cboxBtnClickhandler);
+  // cbox drop button
+  const btnCboxdrop = func.getEl('.cbox button');
+  btnCboxdrop.addEventListener('click', formHandler.btnCboxClick);
 
   // TEXTFIELD
-  const requiredInputs = getElAll('.field--required input');
-  requiredInputs.forEach(requireInput => {
-    requireInput.addEventListener('keyup', requireInputKeyupHandler);
+  const inputRequireds = func.getElAll('.field--required input');
+  inputRequireds.forEach(input => {
+    input.addEventListener('keyup', formHandler.requireInputKeyup);
   })
 
   // COMBOBOX
 
 
   // CHECKBOX
-  const checkboxs = getElAll('.form__header .checkbox');
+  const checkboxs = func.getElAll('.form__header .checkbox');
   checkboxs.forEach(checkbox => {
-    checkbox.addEventListener('click', checkboxClickHandler);
+    checkbox.addEventListener('click', formHandler.checkboxClick);
   })
 
   // DATEPICKER
-  const datepickerIcons = getElAll('.dpicker__icon');
-  datepickerIcons.forEach(icon => {
-    icon.addEventListener('click', datePickerIconClickHandler);
+  const iconDatepickers = func.getElAll('.dpicker__icon');
+  iconDatepickers.forEach(icon => {
+    icon.addEventListener('click', formHandler.iconDatepickerClick);
   })
 
-
-}
-
-
-// INIT EVENTS DIALOG
-function initDialogEvents() {
-  // FORM CLOSE DIALOG
-  // formCLoseDialog close btn
-  const formCloseDialogCloseBtn = getEl('.dialog__close');
-  formCloseDialogCloseBtn.addEventListener('click', formDialogCloseBtnClickHandler);
+  // DIALOG
+  const btnDialogClose = func.getEl('.dialog__close');
+  btnDialogClose.addEventListener('click', formHandler.btnDialogCloseClick);
 
   // formCLoseDialog no btn
-  const formCloseDialogNoBtn = getEl('.dialog__footer > .btn--secondary');
-  formCloseDialogNoBtn.addEventListener('click', formDialogNoBtnClickHandler);
+  const btnDialogNo = func.getEl('.dialog__footer > .btn--secondary');
+  btnDialogNo.addEventListener('click', formHandler.btnDialogNoClick);
 
   // formCLoseDialog yes btn
-  const formCloseDialogYesBtn = getEl('.dialog__footer > .btn--primary');
-  formCloseDialogYesBtn.addEventListener('click', formCloseDialogYesBtnClickHandler);
-}
-
-
-
-
-// HANDLER
-
-
-function addEmployeeBtnClickHandler() {
-  // Refresh form
-  refreshForm('.wrapper--form');
-
-  // Show form
-  showElement('.wrapper--form');
-}
-
-function formCloseBtnClickHandler() {
-  if (checkFormHasInput('.wrapper--form')) {
-    // hien thi dialog xac minh
-    showElement('.wrapper--dialog');
-  } else {
-    hideElement('.wrapper--form');
-  }
-}
-
-function formDialogCloseBtnClickHandler() {
-  hideElement('.wrapper--dialog');
-}
-
-function formDialogNoBtnClickHandler() {
-  hideElement('.wrapper--dialog');
-  hideElement('.wrapper--form');
-}
-
-function formCancelBtnClickHandler() {
-  hideElement('.wrapper--form');
-}
-
-function formCatBtnClickHandler() {
-  if (validateForm()) {
-    refreshForm('.wrapper--form');
-    hideElement('.wrapper--form');
-  }
-}
-
-function formCatVaThemBtnClickHandler() {
-  if (validateForm()) {
-    refreshForm('.wrapper--form');
-  }
-}
-
-function formCloseDialogYesBtnClickHandler() {
-  hideElement('.wrapper--dialog');
-  if (validateForm()) {
-    hideElement('.wrapper--form');
-  } 
-}
-
-
-function requireInputKeyupHandler(e) {
-  const textField = e.target;
-  const parent = textField.closest('.field--required');
-  validator.notEmptyCheckByElement(parent);
-}
-
-function checkboxClickHandler(e) {
-  const checkbox = e.target;
-  checkbox.classList.toggle('mi-checkbox-checked');
-}
-
-function datePickerIconClickHandler(e) {
-  const icon = e.target;
-  const dpicker = icon.closest('.dpicker');
-  const dpickerBox = dpicker.querySelector('.dpicker__box');
-  dpickerBox.classList.toggle('display--none');
+  const btnDialogYes = func.getEl('.dialog__footer > .btn--primary');
+  btnDialogYes.addEventListener('click', formHandler.btnDialogYesClick);
 
 }
 
-function cboxBtnClickhandler(e) {
-  const btn = e.target;
-  const cboxSelect = btn.closest('.cbox__select');
-  cboxSelect.querySelector('.select__optionbox').classList.toggle('display--none');
-}
-
-// FUNCTION
-
-function showElement(querySelectorString) {
-  const el = getEl(querySelectorString);
-  el.classList.remove('display--none');
-}
-
-function hideElement(querySelectorString) {
-  const el = getEl(querySelectorString);
-  el.classList.add('display--none');
-}
-
-function getEl(querySelectorString) {
-  return document.querySelector(querySelectorString);
-}
-
-function getElAll(querySelectorString) {
-  return document.querySelectorAll(querySelectorString);
-}
-
-function refreshForm(querySelector) {
-  const el = getEl(querySelector);
-  
-  //Clear input value and radio checked
-  const inputs = el.querySelectorAll('input');
-  for (let i = 0; i < inputs.length; ++ i) {
-    if (inputs[i].getAttribute('type') == 'text')
-      inputs[i].value = "";
-    else 
-      inputs[i].checked = false;
-  }
-
-  // Clear error state
-  const requiredElements = el.querySelectorAll('.error-noti');
-  for (let i = 0; i < requiredElements.length; ++ i) {
-    requiredElements[i].classList.remove('error-noti');
-  }
-}
-
-function validateForm() {
-  // ValidateInput
-  // empty check
-  const indexEmptyCheck = validator.notEmptyCheckByQueryString('.fu__index .txtfield');
-  const nameEmptyCheck = validator.notEmptyCheckByQueryString('.fu__name .txtfield');
-  const unitEmptyCheck = validator.notEmptyCheckByQueryString('.fu__unit .cbox');
-  return (indexEmptyCheck && nameEmptyCheck && unitEmptyCheck);
-}
-
-function checkFormHasInput(querySelector) {
-  const form = getEl(querySelector);
-  const inputs = form.querySelectorAll('input');
-  for (let i = 0; i < inputs.length; ++ i) {
-    if (inputs[i].getAttribute('type') == 'text') {
-      if (inputs[i].value != "") return true;
-    } else {
-      if (inputs[i].checked == true) return true;
-    }
-  }
-  return false;
-}
 
 
 
 
-var validator = {
-
-  notEmptyCheckByQueryString: function(queryString) {
-    const el = getEl(queryString);
-    return this.notEmptyCheckByElement(el);
-  },
-  notEmptyCheckByElement: function(el) {
-    const textField = el.querySelector('input');
-    if (textField.value.trim() == '') {
-      el.classList.add('error-noti');
-      const notiEl = el.querySelector('.noti');
-      notiEl.innerText = `${el.querySelector('.label').innerText} không được để trống`;
-      return false;
-    } else {
-      el.classList.remove('error-noti');
-      const notiEl = el.querySelector('.noti');
-      notiEl.innerText = ``;
-      return true;
-    }
-  }
-}
