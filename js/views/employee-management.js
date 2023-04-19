@@ -14,10 +14,8 @@ function initEvents() {
     const addEmployeeBtn = document.querySelector('.pcontent__heading > .btn__add');
     addEmployeeBtn.addEventListener("click", () => {toggleElement('.wrapper--form')});
 
-    const closeBtnList = document.querySelectorAll('.btn--close');
-    for (const btn of closeBtnList) {
-      btn.addEventListener("click", hideWrapper);
-    }
+    const formCloseButton = document.querySelector('.form__header .btn--close');
+    formCloseButton.addEventListener("click", formCloseButtonHandler);
 
   } catch (error) {
     console.log(error);
@@ -46,5 +44,19 @@ function hideWrapper() {
   console.log(closestWrapper);
   console.log("--------------------------");
   closestWrapper.classList.add('display--none');
+}
+
+/**
+ * Sự kiện đóng form thông tin nhân viên
+ * Author: astr000naut (18/04/2023)
+ * Modified: none
+ */
+function formCloseButtonHandler() {
+  // Popup thông báo bạn có muốn đóng không
+    const formCloseComfirmPopup = document.querySelector('.dialog--closeconfirm');
+    formCloseComfirmPopup.classList.remove('display--none');
+  //
+
+
 }
 
