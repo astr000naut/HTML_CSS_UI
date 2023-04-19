@@ -58,6 +58,10 @@ function initEmployeeFormEvents() {
   catVaThemBtn.addEventListener('click', formCatVaThemBtnClickHandler);
 
   // TEXTFIELD
+  const requiredInputs = getElAll('.field--required input');
+  for (let i = 0; i < requiredInputs.length; ++ i) {
+    requiredInputs[i].addEventListener('keyup', requireInputKeyupHandler);
+  }
 
   // COMBOBOX
 
@@ -71,12 +75,13 @@ function initDialogEvents() {
   const formCloseDialogCloseBtn = getEl('.dialog__close');
   formCloseDialogCloseBtn.addEventListener('click', formDialogCloseBtnClickHandler);
 
-  // formCLoseDialog close btn
+  // formCLoseDialog no btn
   const formCloseDialogNoBtn = getEl('.dialog__footer > .btn--secondary');
-  console.log(formCloseDialogNoBtn);
   formCloseDialogNoBtn.addEventListener('click', formDialogNoBtnClickHandler);
-  // formCLoseDialog close btn
 
+  // formCLoseDialog yes btn
+  const formCloseDialogYesBtn = getEl('.dialog__footer > .btn--primary');
+  formCloseDialogYesBtn.addEventListener('click', formCloseDialogYesBtnClickHandler);
 }
 
 
@@ -94,9 +99,13 @@ function addEmployeeBtnClickHandler() {
 }
 
 function formCloseBtnClickHandler() {
-  // hien thi dialog xac minh
-  showElement('.wrapper--dialog');
-
+  console.log(checkFormHasInput('.wrapper--form'));
+  if (checkFormHasInput('.wrapper--form')) {
+    // hien thi dialog xac minh
+    showElement('.wrapper--dialog');
+  } else {
+    hideElement('.wrapper--form');
+  }
 }
 
 function formDialogCloseBtnClickHandler() {
@@ -113,22 +122,30 @@ function formCancelBtnClickHandler() {
 }
 
 function formCatBtnClickHandler() {
-  // ValidateInput
-  // empty check
-  const indexEmptyCheck = validator.notEmptyCheck('.fu__index .txtfield');
-  const nameEmptyCheck = validator.notEmptyCheck('.fu__name .txtfield');
-  const unitEmptyCheck = validator.notEmptyCheck('.fu__unit .cbox');
-
-  // PASS
-  if (indexEmptyCheck && nameEmptyCheck && unitEmptyCheck) {
+  if (validateForm()) {
     refreshForm('.wrapper--form');
     hideElement('.wrapper--form');
   }
 }
 
 function formCatVaThemBtnClickHandler() {
-  formCatBtnClickHandler();
-  showElement('.wrapper--form');
+  if (validateForm()) {
+    refreshForm('.wrapper--form');
+  }
+}
+
+function formCloseDialogYesBtnClickHandler() {
+  hideElement('.wrapper--dialog');
+  if (validateForm()) {
+    hideElement('.wrapper--form');
+  } 
+}
+
+
+function requireInputKeyupHandler(e) {
+  const textField = e.target;
+  const parent = textField.closest('.field--required');
+  validator.notEmptyCheckByElement(parent);
 }
 
 // FUNCTION
@@ -147,6 +164,9 @@ function getEl(querySelectorString) {
   return document.querySelector(querySelectorString);
 }
 
+function getElAll(querySelectorString) {
+  return document.querySelectorAll(querySelectorString);
+}
 
 function refreshForm(querySelector) {
   const el = getEl(querySelector);
@@ -167,14 +187,43 @@ function refreshForm(querySelector) {
   }
 }
 
+function validateForm() {
+  // ValidateInput
+  // empty check
+  const indexEmptyCheck = validator.notEmptyCheckByQueryString('.fu__index .txtfield');
+  const nameEmptyCheck = validator.notEmptyCheckByQueryString('.fu__name .txtfield');
+  const unitEmptyCheck = validator.notEmptyCheckByQueryString('.fu__unit .cbox');
+  return (indexEmptyCheck && nameEmptyCheck && unitEmptyCheck);
+}
+
+function checkFormHasInput(querySelector) {
+  const form = getEl(querySelector);
+  const inputs = form.querySelectorAll('input');
+  for (let i = 0; i < inputs.length; ++ i) {
+    if (inputs[i].getAttribute('type') == 'text') {
+      if (inputs[i].value != "") return true;
+    } else {
+      if (inputs[i].checked == true) return true;
+    }
+  }
+  return false;
+}
+
+
+
+
 var validator = {
-  notEmptyCheck: function(querySelector) {
-    const el = getEl(querySelector);
+
+  notEmptyCheckByQueryString: function(queryString) {
+    const el = getEl(queryString);
+    return this.notEmptyCheckByElement(el);
+  },
+  notEmptyCheckByElement: function(el) {
     const textField = el.querySelector('input');
     if (textField.value.trim() == '') {
       el.classList.add('error-noti');
       const notiEl = el.querySelector('.noti');
-      notiEl.innerText = `${el.querySelector('.field--required').innerText} không được để trống`;
+      notiEl.innerText = `${el.querySelector('.label').innerText} không được để trống`;
       return false;
     } else {
       el.classList.remove('error-noti');
@@ -182,6 +231,5 @@ var validator = {
       notiEl.innerText = ``;
       return true;
     }
-    
   }
 }

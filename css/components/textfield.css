@@ -20,9 +20,10 @@
     margin-bottom: 8px;
     font-weight: 500;
 }
-.txtfield__label.field--required::after {
-   content: " *";
-   color: red;
+
+.txtfield.field--required .txtfield__label::after {
+    content: " *";
+    color: red;
 }
 
 .txtfield__input {

@@ -7,7 +7,7 @@
     margin-bottom: 8px;
 }
 
-.cbox__label.field--required::after {
+.cbox.field--required .cbox__label::after {
     content: " *";
     color: red;
 }
