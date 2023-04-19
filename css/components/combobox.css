@@ -3,6 +3,11 @@
     margin-bottom: 8px;
 }
 
+.cbox__label.field--required::after {
+    content: " *";
+    color: red;
+}
+
 .select__box {
     display: flex;
     height: var(--h-default);

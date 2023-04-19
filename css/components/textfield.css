@@ -16,6 +16,10 @@
     margin-bottom: 8px;
     font-weight: 500;
 }
+.txtfield__label.field--required::after {
+   content: " *";
+   color: red;
+}
 
 .txtfield__input {
     width: 100%;
@@ -113,10 +117,6 @@
 
 .txtfield--search .txtfield__icon:active {
     background-color: var(--clr-t-border);
-}
-
-.require-asterisk {
-    color: red;
 }
 
 
