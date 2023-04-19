@@ -5,6 +5,10 @@
 
 /* Textfield */
 
+.txtfield {
+    position: relative;
+}
+
 
 .txtfield__textbox {
     height: var(--h-default);
@@ -38,19 +42,21 @@
      border: 1px solid var(--clr-lg500);
  }
 
-.txtfield:not(.txtfield--error) .txtfield__noti {
+.txtfield:not(.error-noti) .txtfield__noti {
     display: none;
 }
 
 .txtfield__noti {
-    margin-top: 8px;
+    /* margin-top: 8px; */
     color: red;
-    font-size: 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 70px;
 }
 
 /* Error */
 
-.txtfield--error .txtfield__input {
+.error-noti .txtfield__input {
     border: 1px solid red;
 }
 

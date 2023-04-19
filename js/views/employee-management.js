@@ -41,7 +41,7 @@ function initContentEvents() {
 // INIT EVENTS EMPLOYEE FORM
 
 function initEmployeeFormEvents() {
-  // button
+  // BUTTON
   // close button
   const formCloseBtn = getEl('.form__header .btn--close');
   formCloseBtn.addEventListener('click', formCloseBtnClickHandler);
@@ -53,9 +53,13 @@ function initEmployeeFormEvents() {
   const formCatBtn = getEl('.form__footer .footer__right .btn--secondary');
   formCatBtn.addEventListener('click', formCatBtnClickHandler);
 
-  // textbox
+  // catvathem button
+  const catVaThemBtn = getEl('.form__footer .footer__right .btn--primary');
+  catVaThemBtn.addEventListener('click', formCatVaThemBtnClickHandler);
 
-  // combobox
+  // TEXTFIELD
+
+  // COMBOBOX
 
 }
 
@@ -106,10 +110,23 @@ function formCancelBtnClickHandler() {
 
 function formCatBtnClickHandler() {
   // ValidateInput
-  const fuIndexTxtfield = getEl('.fu__index .txtfield');
-  fuIndexTxtfield.classList.add('txtfield--error');
-  const fuIndexTxtfieldNoti = fuIndexTxtfield.children[2];
+  // empty check
+  const indexEmptyCheck = validator.notEmptyCheck('.fu__index .txtfield');
+  const nameEmptyCheck = validator.notEmptyCheck('.fu__name .txtfield');
+  const unitEmptyCheck = validator.notEmptyCheck('.fu__unit .cbox');
 
+  // PASS
+  if (indexEmptyCheck && nameEmptyCheck && unitEmptyCheck) {
+    clearText('.fu__index .txtfield');
+    clearText('.fu__name .txtfield');
+    clearText('.fu__unit .cbox');
+    hideElement('.wrapper--form');
+  }
+}
+
+function formCatVaThemBtnClickHandler() {
+  formCatBtnClickHandler();
+  showElement('.wrapper--form');
 }
 
 // FUNCTION
@@ -126,4 +143,28 @@ function hideElement(querySelectorString) {
 
 function getEl(querySelectorString) {
   return document.querySelector(querySelectorString);
+}
+
+function clearText(querySelector) {
+  const el = getEl(querySelector);
+  el.querySelector('input').value = "";
+}
+
+var validator = {
+  notEmptyCheck: function(querySelector) {
+    const el = getEl(querySelector);
+    const textField = el.querySelector('input');
+    if (textField.value.trim() == '') {
+      el.classList.add('error-noti');
+      const notiEl = el.querySelector('.noti');
+      notiEl.innerText = `${el.querySelector('.field--required').innerText} không được để trống`;
+      return false;
+    } else {
+      el.classList.remove('error-noti');
+      const notiEl = el.querySelector('.noti');
+      notiEl.innerText = ``;
+      return true;
+    }
+    
+  }
 }

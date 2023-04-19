@@ -1,3 +1,7 @@
+.cbox {
+    position: relative;
+}
+
 .cbox__label {
     font-weight: 500;
     margin-bottom: 8px;
@@ -93,6 +97,13 @@
     border-radius: 8px;
 }
 
+.cbox__noti {
+    position: absolute;
+    top: 70px;
+    color: red;
+    font-size: 12px;
+}
+
 .select__button:hover {
     background-color: var(--clr-t-border);
     cursor: pointer;
@@ -108,9 +119,13 @@
     background-color: var(--clr-t-bg);
 }
 
-.select__input input:focus {
+.cbox:not(.error-noti) .select__input input:focus {
     outline: none;
     border: 1px solid var(--clr-lg500);
+}
+.cbox.error-noti .select__input input {
+    outline: none;
+    border: 1px solid red;
 }
 
 .option__item:hover {
