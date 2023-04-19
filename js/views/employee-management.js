@@ -86,6 +86,10 @@ function initDialogEvents() {
 
 
 function addEmployeeBtnClickHandler() {
+  // Refresh form
+  refreshForm('.wrapper--form');
+
+  // Show form
   showElement('.wrapper--form');
 }
 
@@ -117,9 +121,7 @@ function formCatBtnClickHandler() {
 
   // PASS
   if (indexEmptyCheck && nameEmptyCheck && unitEmptyCheck) {
-    clearText('.fu__index .txtfield');
-    clearText('.fu__name .txtfield');
-    clearText('.fu__unit .cbox');
+    refreshForm('.wrapper--form');
     hideElement('.wrapper--form');
   }
 }
@@ -145,9 +147,24 @@ function getEl(querySelectorString) {
   return document.querySelector(querySelectorString);
 }
 
-function clearText(querySelector) {
+
+function refreshForm(querySelector) {
   const el = getEl(querySelector);
-  el.querySelector('input').value = "";
+  
+  //Clear input value and radio checked
+  const inputs = el.querySelectorAll('input');
+  for (let i = 0; i < inputs.length; ++ i) {
+    if (inputs[i].getAttribute('type') == 'text')
+      inputs[i].value = "";
+    else 
+      inputs[i].checked = false;
+  }
+
+  // Clear error state
+  const requiredElements = el.querySelectorAll('.error-noti');
+  for (let i = 0; i < requiredElements.length; ++ i) {
+    requiredElements[i].classList.remove('error-noti');
+  }
 }
 
 var validator = {

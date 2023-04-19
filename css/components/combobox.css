@@ -104,6 +104,10 @@
     font-size: 12px;
 }
 
+.cbox:not(.error-noti) .cbox__noti {
+    display: none;
+}
+
 .select__button:hover {
     background-color: var(--clr-t-border);
     cursor: pointer;
