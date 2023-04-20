@@ -49,8 +49,11 @@
 
 .txtfield__noti {
     /* margin-top: 8px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: red;
-    font-size: 12px;
+    max-height: 16px;
+    font-size: 11px;
     position: absolute;
     top: 70px;
 }
