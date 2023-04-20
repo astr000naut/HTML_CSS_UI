@@ -87,11 +87,16 @@ function initFormEvents() {
   const btnCboxdrop = func.getEl('.cbox button');
   btnCboxdrop.addEventListener('click', formHandler.btnCboxClick);
 
-  // các textfield bắt buộc nhập
-  const inputRequireds = func.getElAll('.field--required input');
+  // các textfield
+  const inputRequireds = func.getElAll('.field--required');
   inputRequireds.forEach(input => {
     input.addEventListener('keyup', formHandler.requireInputKeyup);
   })
+  const inputs = func.getElAll('.form input');
+  inputs.forEach(input => {
+    input.addEventListener('keydown', formHandler.inputKeydown);
+  })
+
 
   // COMBOBOX
 

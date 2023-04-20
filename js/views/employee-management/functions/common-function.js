@@ -1,3 +1,5 @@
+import {vInputs} from '../../../common/validation-code.js'
+
 /**
  * Hiển thị element bằng cách gỡ class display--none
  * @param {string} queryString string để query element
@@ -65,36 +67,88 @@ export function refreshForm(queryString) {
   }
 }
 
-// LÀM SAU optimize, check null, focus loi
+/**
+ * Validate form
+ * 
+ * Author: Dũng (19/04/2023)
+ */
+export function validateForm() {
+  return validateFormAllTextInput();
+}
+
 /**
  * Validate các trường input và combobox trên form 
  * 
  * Author: Dũng (19/04/2023)
  */
-export function validateForm() {
-  const indexEmptyCheck = notEmptyCheckByQueryString('.fu__index .txtfield');
-  const nameEmptyCheck = notEmptyCheckByQueryString('.fu__name .txtfield');
-  const unitEmptyCheck = notEmptyCheckByQueryString('.fu__unit .cbox');
-  return (indexEmptyCheck && nameEmptyCheck && unitEmptyCheck);
+export function validateFormAllTextInput() {
+  return checkRegexAndPushNoti(vInputs);
+}
+
+/** 
+* * Validate các trường input và combobox trên form 
+* @param {Array} validationInputs chứa thông tin về các element và rules áp dụng
+* @returns {Boolean} cập nhật trạng thái của field và trả về false nếu
+* vi phạm một luật hoặc true nếu vượt qua tất cả các luật
+* Author: Dũng (19/04/2023)
+*/
+function checkRegexAndPushNoti(validationInputs) {
+  let response = true;
+  validationInputs.forEach(input => {
+    const queryString = input.elementQueryString;
+    const el = getEl(queryString);
+
+    const inputEl = el.querySelector('input');
+    const textValue = inputEl.value;
+
+    const rules = input.rules;
+    for (let i = 0; i < rules.length; ++ i) {
+      
+      let regex = rules[i].regex;
+      if (!regex.test(textValue)) {
+        response = false;
+        // Cập nhật trạng thái lỗi
+        const notiEl = el.querySelector('.noti');
+        notiEl.innerText = rules[i].errorMessage;
+        el.classList.add('error-noti');
+
+        // Dừng lại ngay khi sai rule 
+        break;
+      };
+    }
+  }) 
+
+  // Xóa trạng thái lỗi nếu pass hết rule
+  if (response) {
+    el.classList.remove('error-noti');
+    const notiEl = el.querySelector('.noti');
+    notiEl.innerText = ``;
+  }
+  return response;
+
 }
 
 /**
  * Kiểm tra tất cả texfield xem đang có dữ liệu nhập vào không
- * @param {string} queryString string để query element
+ * 
  * 
  * Author: Dũng (19/04/2023)
  */
-export function checkFormHasInput(queryString) {
-  const form = getEl(queryString);
+export function checkFormHasInput() {
+  const form = getEl('.wrapper--form');
   const inputs = form.querySelectorAll('input');
 
-  inputs.forEach(input => {
-    if (input.getAttribute('type') == 'text') {
-      if (input.value != "") return true;
+  for (let i = 0; i < inputs.length; ++ i) {
+    if (inputs[i].getAttribute('type') == 'text') {
+      if (inputs[i].value != "") {  
+        return true;
+      }
     } else {
-      if (input.checked == true) return true;
+      if (inputs[i].checked == true) { 
+        return true;
+      }
     }
-  })
+  }
   return false;
 }
 

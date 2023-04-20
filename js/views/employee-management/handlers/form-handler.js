@@ -9,7 +9,7 @@ const formHandler = {
   btnCloseClick: () => {
 
     // Kiểm tra form đang được nhập hay không
-    if (func.checkFormHasInput('.wrapper--form')) {
+    if (func.checkFormHasInput()) {
       func.showElement('.wrapper--dialog');
     } else {
       func.hideElement('.wrapper--form');
@@ -65,7 +65,7 @@ const formHandler = {
  */
   requireInputKeyup: (e) => {
     const textField = e.target;
-    const parent = textField.closest('.field--required');
+    const parent = textField.closest('.component--root');
     func.notEmptyCheckByElement(parent);
   },
 /**
@@ -114,6 +114,21 @@ const formHandler = {
   btnDialogNoClick: () => {
     func.hideElement('.wrapper--dialog');
     func.hideElement('.wrapper--form');
+  },
+
+  /**
+ * Xử lý sự kiện keydown cho input
+ * Khi đang nhập dữ liệu thì tắt thông báo lỗi của input (nếu có)
+ * 
+ * Author: Dũng (20/04/2023)
+ */
+  inputKeydown: (e) => {
+    const el = e.target;
+    const rootEl = el.closest('.component--root');
+
+    rootEl.classList.remove('error-noti');
+    const notiEl = rootEl.querySelector('.noti');
+    notiEl.innerText = ``;
   }
 };
 
