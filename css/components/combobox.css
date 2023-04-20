@@ -117,14 +117,19 @@
     background-color: var(--clr-t-bg);
 }
 
-.cbox:not(.error-noti):has(input:focus) .select__box {
+.cbox:has(input:focus) .select__box {
     outline: none;
     border: 1px solid var(--clr-lg500);  
 } 
 
-.cbox.error-noti .select__box {
+.cbox.error-noti:has(.select__optionbox.display--none) .select__box {
     outline: none;
     border: 1px solid red;
+}
+
+.cbox:not(:has(.select__optionbox.display--none)) .select__box {
+    outline: none;
+    border: 1px solid var(--clr-lg500);
 }
 
 .option__item:hover {
@@ -139,6 +144,9 @@
 .option__item:not(.item--selected) .option__icon {
     display: none;
 }
+
+
+
 
 
 
