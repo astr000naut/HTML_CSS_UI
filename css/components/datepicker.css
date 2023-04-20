@@ -198,3 +198,7 @@
     position: absolute;
     top: 70px;
 }
+
+.dpicker:not(.error-noti) .dpicker__noti {
+    display: none;
+}
