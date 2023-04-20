@@ -85,7 +85,11 @@ const sidebarHandler = {
 
     // Nếu kích thước sizebar là nhỏ thì mới bắt sự kiện này
     if (type == 'small') {
+      const itemYPos = item.getBoundingClientRect().y;
       const hoverBox = item.querySelector('.item__hoverbox');
+      hoverBox.style.top = `${itemYPos - 56}px`;
+      console.log(itemYPos);
+      console.log(hoverBox.style.top);
       hoverBox.classList.remove('display--none');
     }
   },
