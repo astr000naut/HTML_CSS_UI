@@ -94,6 +94,7 @@ export function validateFormAllTextInput() {
 */
 function checkRegexAndPushNoti(validationInputs) {
   let response = true;
+  let hasFocused = 0;
   validationInputs.forEach(input => {
     const queryString = input.elementQueryString;
     const el = getEl(queryString);
@@ -102,6 +103,8 @@ function checkRegexAndPushNoti(validationInputs) {
     const textValue = inputEl.value;
 
     const rules = input.rules;
+    let thisElPassed = 1;
+
     for (let i = 0; i < rules.length; ++ i) {
       
       let regex = rules[i].regex;
@@ -111,19 +114,24 @@ function checkRegexAndPushNoti(validationInputs) {
         const notiEl = el.querySelector('.noti');
         notiEl.innerText = rules[i].errorMessage;
         el.classList.add('error-noti');
-
         // Dừng lại ngay khi sai rule 
+        thisElPassed = 0;
         break;
       };
     }
+    // Focus vào ô lỗi đầu tiên
+    if (!hasFocused && !thisElPassed) {
+      hasFocused = true;
+      inputEl.focus();
+    }
+    if (thisElPassed) {
+      // Nếu pass hết các rule của một ô input thì xóa trạng thái error
+      el.classList.remove('error-noti');
+      const notiEl = el.querySelector('.noti');
+      notiEl.innerText = ``;
+    } 
   }) 
 
-  // Xóa trạng thái lỗi nếu pass hết rule
-  if (response) {
-    el.classList.remove('error-noti');
-    const notiEl = el.querySelector('.noti');
-    notiEl.innerText = ``;
-  }
   return response;
 
 }

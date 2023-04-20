@@ -36,7 +36,7 @@ const validationEmailField = {
   rules: [
     {
       regex: /^$|^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      errorMessage: 'Địa chỉ Email không hợp lệ'
+      errorMessage: 'Định dạng Email không hợp lệ'
     }
   ]
 };
@@ -98,11 +98,12 @@ vInputs.push(
   validationInputIndexField,
   validationInputNameField,
   validationInputUnitField,
-  validationEmailField,
+  validationBirthdayField,
+  validationCMNDField,
+  validationCMNDDateField,
   validationPhoneField,
   validationPhone2Field,
-  validationBirthdayField,
-  validationCMNDDateField,
-  validationCMNDField);
+  validationEmailField
+  );
 
 export {vInputs};
