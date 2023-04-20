@@ -2,6 +2,7 @@ import * as func from "./functions/common-function.js";
 import { formHandler } from "./handlers/form-handler.js";
 import { contentHandler } from "./handlers/content-handler.js";
 import { sidebarHandler } from "./handlers/sidebar-handler.js";
+import { cboxHandler } from "./handlers/cbox-handler.js";
 
 initEvents();
 
@@ -83,10 +84,6 @@ function initFormEvents() {
   const btnCatvathem = func.getEl('.form__footer .footer__right .btn--primary');
   btnCatvathem.addEventListener('click', formHandler.btnCatvathemClick);
 
-  // dropbox-btn chọn đơn vị
-  const btnCboxdrop = func.getEl('.cbox button');
-  btnCboxdrop.addEventListener('click', formHandler.btnCboxClick);
-
   // các textfield
   const inputRequireds = func.getElAll('.field--required');
   inputRequireds.forEach(input => {
@@ -99,6 +96,28 @@ function initFormEvents() {
 
 
   // COMBOBOX
+  // dropbox-btn chọn đơn vị
+  const btnCboxdrop = func.getEl('.cbox button');
+  btnCboxdrop.addEventListener('click', cboxHandler.btnCboxClick);
+
+  // click vào các item trong option chọn đơn vị
+  const itemOptions = func.getElAll('.cbox .option__item');
+  itemOptions.forEach(item => {
+    item.addEventListener('click', cboxHandler.itemOptionClick);
+  })
+
+  // cbombobox input 
+  const cboxInput = func.getEl('.cbox input');
+  cboxInput.addEventListener('keyup', cboxHandler.inputKeyup);
+  cboxInput.addEventListener('keypress', cboxHandler.inputKeypress);
+  
+
+
+
+
+
+
+
 
 
   // các check box

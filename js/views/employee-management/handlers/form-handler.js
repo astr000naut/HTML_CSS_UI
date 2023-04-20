@@ -89,16 +89,6 @@ const formHandler = {
     dpickerBox.classList.toggle('display--none');
   },
 /**
- * Xử lý sự kiện click cbox btn
- * 
- * Author: Dũng (19/04/2023)
- */
-  btnCboxClick: (e) => {
-    const btn = e.target;
-    const cboxSelect = btn.closest('.cbox__select');
-    cboxSelect.querySelector('.select__optionbox').classList.toggle('display--none');
-  },
-/**
  * Xử lý sự kiện click btn đóng dialog xác nhận đóng form
  * 
  * Author: Dũng (19/04/2023)
