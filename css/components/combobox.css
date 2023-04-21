@@ -132,6 +132,10 @@
     border: 1px solid var(--clr-lg500);
 }
 
+.cbox:not(:has(.select__optionbox.display--none)) .cbox__noti {
+    display: none;
+}
+
 .option__item:hover {
     cursor: pointer;
     background-color: var(--clr-lg100);
@@ -144,6 +148,8 @@
 .option__item:not(.item--selected) .option__icon {
     display: none;
 }
+
+
 
 
 /* Loader */

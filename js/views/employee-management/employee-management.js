@@ -117,9 +117,6 @@ function initFormEvents() {
 
 
 
-
-
-
   // các check box
   const checkboxs = func.getElAll('.form__header .checkbox');
   checkboxs.forEach(checkbox => {
