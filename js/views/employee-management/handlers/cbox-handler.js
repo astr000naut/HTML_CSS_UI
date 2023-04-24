@@ -62,7 +62,7 @@ const getDataSet = new Promise((resolve, reject) => {
 const filterData = (input) => {
   const response = [];
   for (let i = 0; i < dataset.length; ++ i)   {
-    if (dataset[i].text.includes(input)) {
+    if (dataset[i].text.toLowerCase().includes(input.toLowerCase())) {
       response.push(dataset[i]);
     }
   }
@@ -87,6 +87,7 @@ const initData = (optionlistEl) => {
 
   getDataSet.then(
     dataset => {
+      console.table(dataset);
       optionlistEl.innerHTML = '';
       for (const data of dataset) {
         optionlistEl.insertAdjacentHTML('beforeend',
